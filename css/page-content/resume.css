@@ -1,0 +1,95 @@
+.resume-container {
+}
+
+.resume-container > h2 {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.resume-container > p {
+  display: block;
+  text-align: right;
+}
+
+.education-wrapper {
+}
+
+.education-wrapper > h4 {
+  display: block;
+  border-bottom: 2px solid var(--main-border-color);
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+/*style progress bar*/
+.education-progress-item {
+  position: relative;
+  padding: 10px;
+}
+
+.year-and-job {
+  height: 100%;
+  padding: 0 10px;
+}
+
+.year-and-job * {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.mid-line {
+  position: absolute;
+  background-color: var(--main-text-color);
+  margin: 0 1px;
+  height: 100%;
+  width: 2px;
+  background-color: rgb(207, 207, 207);
+  top: 0;
+  left: 0;
+}
+
+.mid-line::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--main-border-color);
+  width: 13px;
+  height: 13px;
+  top: 11px;
+  left: -6px;
+  background-color: white;
+}
+
+.experience-content {
+  padding: 0 10px;
+}
+
+.experience-content * {
+  margin-bottom: 0 !important;
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 996px) {
+  .resume-container {
+    padding: 50px;
+  }
+}
+
+@media only screen and (min-width: 485px) {
+  .education-progress-item div {
+    display: inline-table;
+  }
+
+  .year-and-job {
+    width: 30%;
+    text-align: right;
+  }
+
+  .mid-line {
+    left: 30%;
+  }
+  .experience-content {
+    width: 65%;
+  }
+}

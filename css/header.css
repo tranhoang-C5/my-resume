@@ -1,0 +1,126 @@
+/******header mobile*******/
+.header-mobile {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.header-mobile-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+
+.header-mobile i {
+  display: block;
+  font-size: 25px;
+}
+/******header site*******/
+.header {
+  position: fixed;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 1px 10px rgb(196, 196, 196);
+  height: calc(100vh - 60px);
+  overflow: scroll;
+  transform: translateX(-110%);
+  transition: 0.3s;
+  opacity: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+.header.activated {
+  transform: translateX(0);
+  opacity: 100;
+}
+.header::-webkit-scrollbar {
+  display: none;
+}
+.my-photo {
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+.my-photo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.site-nav {
+  list-style-type: none;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.site-nav-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #f5f5f5;
+  color: #a2a2a2;
+}
+.site-nav-item:first-child {
+  border-top: 1px solid #f5f5f5;
+}
+s .social-links {
+  padding: 1rem 0;
+}
+.social-links a {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  color: #888888;
+  font-size: 1rem;
+  background-color: #cccccc;
+  margin-left: 5px;
+  padding: auto;
+  line-height: 30px;
+  cursor: poiter;
+}
+
+.author {
+  color: #a2a2a2;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 996px) {
+  .header {
+    width: 200px;
+    transform: translateX(0);
+    height: 100vh;
+    opacity: 100;
+  }
+  .header-mobile {
+    display: none;
+  }
+}

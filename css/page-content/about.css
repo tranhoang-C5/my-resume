@@ -1,0 +1,148 @@
+.about-me-container {
+}
+
+.overview-img {
+  padding: 0;
+  height: 560px;
+  overflow: hidden;
+}
+.overview-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/*overview*/
+.overview-content {
+  padding: 40px 30px;
+  background-color: #fafafa;
+}
+
+.overview-content h1 {
+  font-weight: 600;
+  color: #4e4e4e;
+}
+
+.overview-content p {
+  font-size: 0.9rem;
+}
+
+.about-btn {
+  border: 2px solid var(--main-border-color);
+  width: fit-content;
+  padding: 8px 30px;
+  transition: 0.4s;
+  margin-top: 50px;
+}
+
+.about-btn:hover {
+  background-color: var(--main-border-color);
+}
+
+.about-btn a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: rgb(77, 77, 77);
+}
+
+.about-btn:hover a {
+  color: white;
+}
+
+@media only screen and (min-width: 996px) {
+  .overview-content {
+    padding: 70px;
+  }
+}
+
+/*my skill*/
+
+.skill-details {
+  padding: 30px;
+}
+
+.skill-title {
+  padding-bottom: 2rem;
+}
+
+.skill-title h3 {
+  display: block;
+  border-bottom: 2px solid var(--main-border-color);
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
+.skill-item {
+  display: flex;
+}
+
+.skill-item i {
+  display: block;
+  width: 100px;
+  padding: 10px 10px 10px 0;
+  font-size: 30px;
+  color: #999999;
+}
+
+.skill-item div {
+  padding: 10px;
+}
+
+.skill-item p {
+  font-size: 0.9rem;
+}
+.skill-item h3 {
+  font-size: 1.2rem;
+}
+
+/*carosel famous*/
+
+.famous-title {
+  display: block;
+  border-bottom: 2px solid var(--main-border-color);
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+  margin-left: 30px;
+}
+
+.famous-item {
+  position: relative;
+  overflow: visible;
+  padding: 2rem;
+}
+
+.famous-item p {
+  display: block;
+  padding: 2rem;
+  background-color: #fafafa;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-bottom: 0;
+}
+
+.famous-detail {
+  display: flex;
+  z-index: 100;
+  align-items: flex-end;
+  transform: translateY(-40%);
+}
+.famous-detail img {
+  height: 70px;
+  width: 70px !important;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+
+.famous-detail h3 {
+  font-size: 1rem;
+  padding: 0px 20px;
+}

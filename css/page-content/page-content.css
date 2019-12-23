@@ -1,0 +1,21 @@
+@import url("./about.css");
+@import url("./resume.css");
+:root  {
+  --main-border-color: #2ad482;
+  --main-text-color: #6d6d6d;
+}
+
+.page-content {
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.page-content p {
+  color: var(--main-text-color);
+}
+
+@media only screen and (min-width: 996px) {
+  .page-content {
+    margin-left: 215px;
+  }
+}
