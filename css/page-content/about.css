@@ -28,7 +28,7 @@
   font-size: 0.9rem;
 }
 
-.about-btn {
+.main-btn {
   border: 2px solid var(--main-border-color);
   width: fit-content;
   padding: 8px 30px;
@@ -36,11 +36,11 @@
   margin-top: 50px;
 }
 
-.about-btn:hover {
+.main-btn:hover {
   background-color: var(--main-border-color);
 }
 
-.about-btn a {
+.main-btn a {
   text-decoration: none;
   display: block;
   width: 100%;
@@ -48,7 +48,7 @@
   color: rgb(77, 77, 77);
 }
 
-.about-btn:hover a {
+.main-btn:hover a {
   color: white;
 }
 

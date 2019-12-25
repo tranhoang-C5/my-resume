@@ -1,0 +1,35 @@
+.hidden-page {
+  opacity: 0;
+}
+.current-page {
+  opacity: 1;
+  z-index: 100;
+}
+/*slide right to left*/
+@keyframes slideRightToLeftIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideRightToLeftOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+.slideRightToLeftIn {
+  animation: slideRightToLeftIn 0.5s ease-in-out 0.1s 1 forwards;
+}
+.slideRightToLeftOut {
+  animation: slideRightToLeftOut 0.5s ease-in-out 0.1s 1 forwards;
+}
+/*end slideright to left*/

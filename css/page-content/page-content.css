@@ -1,6 +1,6 @@
 @import url("./about.css");
 @import url("./resume.css");
-:root  {
+:root {
   --main-border-color: #2ad482;
   --main-text-color: #6d6d6d;
 }
@@ -8,6 +8,17 @@
 .page-content {
   background-color: white;
   padding-bottom: 50px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.page-content-item {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: scroll;
 }
 
 .page-content p {

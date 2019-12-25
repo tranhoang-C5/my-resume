@@ -21,3 +21,14 @@ $(document).ready(function() {
     }
   });
 });
+
+/******skill bar with seter******* */
+const skillValue = document.querySelectorAll(".skill-progress span");
+const skillBarPercent = document.querySelectorAll(".skill-bar-percent");
+
+function setSkillBar() {
+  skillValue.forEach(function(el, i) {
+    skillBarPercent[i].style.width = el.textContent;
+  });
+}
+setSkillBar();

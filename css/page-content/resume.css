@@ -15,7 +15,9 @@
 .education-wrapper {
 }
 
-.education-wrapper > h4 {
+.education-wrapper > h4,
+.experience-wrapper > h4,
+.coding-skills > h4 {
   display: block;
   border-bottom: 2px solid var(--main-border-color);
   width: fit-content;
@@ -70,6 +72,42 @@
   font-size: 0.9rem;
 }
 
+.skill-progress {
+  font-size: 0.8rem;
+  width: 100%;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.skill-progress label {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.skill-progress span {
+  float: right;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--main-border-color);
+  position: relative;
+}
+
+.skill-bar-percent {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  background-color: var(--main-border-color);
+  border-radius: 3px;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
 @media only screen and (min-width: 996px) {
   .resume-container {
     padding: 50px;
@@ -87,8 +125,13 @@
   }
 
   .mid-line {
-    left: 30%;
+    left: 30.5%;
   }
+
+  .mid-line::after {
+    top: 16px;
+  }
+
   .experience-content {
     width: 65%;
   }
