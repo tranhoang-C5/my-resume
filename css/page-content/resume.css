@@ -1,18 +1,11 @@
-.resume-container {
-}
-
-.resume-container > h2 {
+.page-content-item[id="resume"] > h2 {
   display: block;
   padding: 20px 0;
   border-bottom: 1px solid rgb(206, 206, 206);
 }
-
-.resume-container > p {
+.page-content-item[id="resume"] > p {
   display: block;
   text-align: right;
-}
-
-.education-wrapper {
 }
 
 .education-wrapper > h4,
@@ -22,6 +15,11 @@
   border-bottom: 2px solid var(--main-border-color);
   width: fit-content;
   margin-bottom: 20px;
+}
+
+.education-wrapper,
+.experience-wrapper {
+  padding-bottom: 30px;
 }
 
 /*style progress bar*/
@@ -105,12 +103,6 @@
   border-radius: 3px;
   border-left: 2px solid white;
   border-right: 2px solid white;
-}
-
-@media only screen and (min-width: 996px) {
-  .resume-container {
-    padding: 50px;
-  }
 }
 
 @media only screen and (min-width: 485px) {

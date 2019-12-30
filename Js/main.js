@@ -2,9 +2,26 @@
 const navBtn = document.querySelector(".header-mobile i");
 const header = document.querySelector(".header");
 
+const navItem = document.querySelectorAll(".site-nav-item");
+const navLink = Array.from(document.querySelectorAll(".site-nav-item a"));
+
 navBtn.addEventListener("click", function() {
   header.classList.toggle("activated");
 });
+//SET activated nav item
+navLink[0].style.cssText =
+  "border-right:2px solid var(--main-border-color); background-color: f9f9f9 ";
+window.addEventListener("hashchange", function() {
+  let hash = location.hash;
+  navLink.forEach(function(el) {
+    el.style = "";
+    if (el.getAttribute("href") === hash) {
+      el.style.borderRight = "2px solid var(--main-border-color)";
+      el.style.backgroundColor = "#f9f9f9";
+    }
+  });
+});
+
 /*********set carosel************ */
 $(document).ready(function() {
   $(".owl-carousel").owlCarousel({

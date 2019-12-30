@@ -12,7 +12,7 @@ page.forEach(function(el, index) {
 // restore default class of page
 function addClassCurrent() {
   page.forEach((el, index) => {
-    el.classList = "page-content-item resume-container container-fluid";
+    el.classList = "page-content-item container-fluid";
   });
   page[currentPageIndex].classList.add("current-page");
 }
@@ -26,7 +26,7 @@ function getNextPage() {
       console.log(nextPageIndex);
       return;
     } else {
-      nextPageIndex = 0;
+      nextPageIndex = currentPageIndex;
     }
   }
 }
@@ -44,32 +44,12 @@ function slidePageRightToLeft() {
 // render page function
 function renderPage() {
   getNextPage();
+  page[nextPageIndex].scrollTop = 0; //scroll next element to top
   if (nextPageIndex !== null && currentPageIndex !== nextPageIndex) {
     slidePageRightToLeft();
   }
 }
 
-navMenu.forEach(function(el, index) {
-  el.addEventListener("click", function handler() {
-    //xoa su kien click cua tat ca cac phan tu nav
-    navMenu.forEach(function(el) {
-      el.removeEventListener("click", handler);
-      setTimeout(() => {
-        el.addEventListener("click", handler);
-      }, 700);
-    });
-    //render page
-    setTimeout(() => {
-      renderPage();
-    }, 30);
-    // add class current
-    setTimeout(() => {
-      addClassCurrent();
-    }, 700);
-  });
-});
-
-addClassCurrent();
 changePageBtn.addEventListener("click", function handler() {
   changePageBtn.removeEventListener("click", handler);
   if (currentPageIndex === page.length - 1) {
@@ -77,10 +57,38 @@ changePageBtn.addEventListener("click", function handler() {
   } else {
     nextPageIndex = currentPageIndex + 1;
   }
-  page[nextPageIndex].scrollTop = 0; //scroll next element to top
-  slidePageRightToLeft();
+  location.hash = page[nextPageIndex].id;
   setTimeout(() => {
     changePageBtn.addEventListener("click", handler);
-    addClassCurrent();
-  }, 700);
+  }, 600);
 });
+
+window.addEventListener("hashchange", function handler() {
+  window.removeEventListener("hashchange", handler);
+  renderPage();
+  setTimeout(() => {
+    addClassCurrent();
+    this.window.addEventListener("hashchange", handler);
+  }, 600);
+});
+
+/************prevent user click multiple at all anchor tag************** */
+const link = document.querySelectorAll("a");
+var alowClick = true;
+function windowClickHandler(e) {
+  if (!alowClick) {
+    e.stopPropagation();
+    e.preventDefault();
+  } else {
+    alowClick = false;
+  }
+  setTimeout(() => {
+    alowClick = true;
+  }, 600);
+}
+link.forEach(function(el, index) {
+  el.addEventListener("click", windowClickHandler);
+});
+
+location.hash = "#about";
+addClassCurrent();
