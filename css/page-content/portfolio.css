@@ -30,8 +30,15 @@
 }
 
 /**Project box*/
+.my-projects {
+  position: relative;
+}
 .project-item-container {
   padding: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
 }
 
 .project-item-container:hover .project-content {
