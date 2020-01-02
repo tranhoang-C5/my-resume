@@ -26,6 +26,10 @@
   color: rgb(173, 173, 173);
 }
 
+.row {
+  margin: 0;
+}
+
 @media only screen and (min-width: 996px) {
   body {
     background-color: #f5f5f5;

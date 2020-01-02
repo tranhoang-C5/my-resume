@@ -89,7 +89,7 @@ function renderFilterdList(list) {
 
   //render match element responsive
   list.forEach(function(el, index) {
-    if (windowWidth >= 768) {
+    if (windowWidth >= 769) {
       let moveValue = `translate(${(index % 3) * elWidth}px,${(elHeight *
         (index - (index % 3))) /
         3}px)`;
@@ -131,3 +131,5 @@ renderFilterdList(listProjects);
 filterBtn.forEach(el => {
   el.addEventListener("click", filterProject);
 });
+
+//**********google map api********* */

@@ -1,0 +1,100 @@
+#blog > h2 {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(206, 206, 206);
+}
+#blog > p {
+  display: block;
+  text-align: right;
+}
+
+.blog-content {
+  padding: 0px;
+}
+
+.blog-content-item {
+  padding: 15px;
+}
+
+.blog-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-content-group {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: white;
+  padding: 0px 5px;
+  height: fit-content;
+  width: fit-content;
+  box-shadow: 0 0 5px gray;
+  font-size: 0.7rem;
+  color: var(--main-text-color);
+  z-index: 1000;
+}
+
+.blog-content-img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.blog-content-title {
+  padding: 10px;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  z-index: 100;
+  min-height: 20%;
+}
+
+.blog-content-title p {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content-title h4 {
+  font-size: 1.1rem;
+  word-spacing: 1px;
+  color: rgb(65, 65, 65);
+}
+
+.blog-wrapper a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.blog-card {
+  padding: 15px;
+}
+.blog-card:hover img {
+  background-color: rgba(114, 114, 114, 0.705);
+  transform: scale(1.1);
+}
+
+.blog-card:hover .mask {
+  opacity: 0.4;
+}
+.mask {
+  background-color: rgb(71, 71, 71);
+  transition: 0.4s;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 80%;
+  top: 0;
+}
