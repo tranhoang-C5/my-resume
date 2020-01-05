@@ -1,11 +1,18 @@
 /******header mobile*******/
 .header-mobile {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   background-color: white;
@@ -14,7 +21,11 @@
 }
 
 .header-mobile-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -27,6 +38,7 @@
 .logo img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -45,16 +57,20 @@
   position: fixed;
   width: 300px;
   text-align: center;
+  -webkit-box-shadow: 0 1px 10px rgb(196, 196, 196);
   box-shadow: 0 1px 10px rgb(196, 196, 196);
   height: calc(100vh - 60px);
   overflow: scroll;
+  -webkit-transform: translateX(-110%);
   transform: translateX(-110%);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
   z-index: 1001;
   background-color: #fff;
 }
 .header.activated {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 100;
 }
@@ -68,6 +84,7 @@
 .my-photo img {
   width: 100px;
   height: 100px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .header-title {
@@ -96,6 +113,7 @@
   width: 100%;
   height: 100%;
   padding: 0.7rem 0rem;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -115,6 +133,13 @@
   padding: auto;
   line-height: 30px;
   cursor: poiter;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: white;
+  background-color: var(--main-border-color);
 }
 
 .author {
@@ -126,6 +151,7 @@
 @media only screen and (min-width: 996px) {
   .header {
     width: 200px;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     height: 100vh;
     opacity: 100;

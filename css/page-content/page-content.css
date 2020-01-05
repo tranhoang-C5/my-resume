@@ -53,6 +53,10 @@
   color: white;
 }
 
+.main-btn:hover {
+  color: white;
+}
+
 @media only screen and (min-width: 996px) {
   .page-content {
     margin-left: 215px;

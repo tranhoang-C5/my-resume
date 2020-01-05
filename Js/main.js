@@ -64,7 +64,7 @@ const listProjects = Array.from(
   document.querySelectorAll(".project-item-container")
 );
 
-//hightlight btn when click
+//hightlight btn when it has been clicked
 function hightlightFilterBtn(btn) {
   filterBtn.forEach(el => {
     el.style.borderColor = "white";
@@ -78,7 +78,7 @@ function renderFilterdList(list) {
   let elHeight = list[0].clientHeight;
   let elWidth = list[0].clientWidth;
 
-  // hide all elment not match value
+  // hide all elment that not match value
   listProjects.forEach((el, index) => {
     let moveValue = `translate(${(index % 3) * elWidth}px,${(elHeight *
       (index - (index % 3))) /
@@ -131,5 +131,3 @@ renderFilterdList(listProjects);
 filterBtn.forEach(el => {
   el.addEventListener("click", filterProject);
 });
-
-//**********google map api********* */

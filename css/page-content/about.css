@@ -6,7 +6,9 @@
 .overview-img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: top;
   object-position: top;
 }
 
@@ -22,31 +24,9 @@
 }
 
 .overview-content p {
-  font-size: 0.9rem;
-}
-
-.main-btn {
-  border: 2px solid var(--main-border-color);
-  width: fit-content;
-  padding: 8px 30px;
-  transition: 0.4s;
-  margin-top: 50px;
-}
-
-.main-btn:hover {
-  background-color: var(--main-border-color);
-}
-
-.main-btn a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: rgb(77, 77, 77);
-}
-
-.main-btn:hover a {
-  color: white;
+  font-size: 0.95rem;
+  line-height: 1.7rem;
+  text-align: justify;
 }
 
 .skill-details {
@@ -71,6 +51,8 @@
 .skill-title h3 {
   display: block;
   border-bottom: 2px solid var(--main-border-color);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 1.5rem;
   font-weight: 400;
@@ -78,6 +60,8 @@
 }
 
 .skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -87,12 +71,16 @@
   padding: 10px 10px 10px 0;
   font-size: 30px;
   color: #999999;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
 }
 
 .skill-item div {
   width: 80%;
   padding: 10px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -108,6 +96,8 @@
 .famous-title {
   display: block;
   border-bottom: 2px solid var(--main-border-color);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 1.5rem;
   font-weight: 400;
@@ -132,9 +122,14 @@
 }
 
 .famous-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   z-index: 100;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-transform: translateY(-40%);
   transform: translateY(-40%);
 }
 .famous-detail img {

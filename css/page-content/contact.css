@@ -9,6 +9,102 @@
 }
 
 #map {
-  height: 450px;
+  padding-top: 20px;
   width: 100%;
+}
+
+.contact-icon {
+  padding-bottom: 50px;
+  width: calc(100% + 30px);
+  transform: translateX(-15px);
+}
+
+.contact-item {
+  margin-top: 30px;
+  border: 1px solid rgb(199, 199, 199);
+  padding: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: rgb(173, 173, 173);
+  padding-bottom: 15px;
+}
+
+.contact-item h4 {
+  color: var(--main-text-color);
+  font-size: 1rem;
+}
+
+.user-info {
+  padding-left: 0;
+}
+.user-info input {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.user-info input::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100px;
+  background-color: black;
+  height: 2px;
+}
+
+.user-info input {
+  padding: 10px;
+  border: 1px solid rgb(199, 199, 199);
+  margin-bottom: 20px;
+}
+
+.user-info textarea {
+  height: 178px;
+  width: 100%;
+}
+
+.message-box h4 {
+  border-bottom: 2px solid var(--main-border-color);
+  display: block;
+  width: fit-content;
+  padding-bottom: 3px;
+  margin-bottom: 30px;
+}
+.message-box .main-btn {
+  background-color: white;
+}
+
+.user-input {
+  position: relative;
+  height: fit-content;
+}
+
+.underline {
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  background-color: var(--main-border-color);
+  transition: 0.5s;
+}
+
+.user-input textarea ~ .underline {
+  bottom: 6px;
+}
+
+.user-info input:focus ~ .underline,
+.user-info textarea:focus ~ .underline {
+  width: 100%;
+}
+
+.user-info input:focus,
+.user-info textarea:focus {
+  outline-color: transparent;
 }

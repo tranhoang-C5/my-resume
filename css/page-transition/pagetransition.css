@@ -32,4 +32,34 @@
 .slideRightToLeftOut {
   animation: slideRightToLeftOut 0.5s ease-in-out 0.1s 1 forwards;
 }
-/*end slideright to left*/
+/*fade an zoom In Out*/
+
+@keyframes zoomAndFadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes zoomAndFadeIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomAndFadeIn {
+  animation: zoomAndFadeIn 0.5s ease-in-out 0.1s 1 forwards;
+}
+
+.zoomAndFadeOut {
+  animation: zoomAndFadeOut 0.5s ease-in-out 0.1s 1 forwards;
+}

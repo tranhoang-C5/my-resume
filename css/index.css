@@ -27,7 +27,11 @@
 }
 
 .row {
-  margin: 0;
+  margin: 0px;
+}
+
+.container-fluid#about {
+  padding: 0 !important;
 }
 
 @media only screen and (min-width: 996px) {

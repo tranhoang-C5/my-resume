@@ -38,7 +38,28 @@ function slidePageRightToLeft() {
   currentPageIndex = nextPageIndex;
   nextPageIndex = null;
 }
-/******cac function hieu ung*******/
+
+function zoomAndFade() {
+  page[currentPageIndex].classList.add("zoomAndFadeOut");
+  page[nextPageIndex].classList.add("zoomAndFadeIn");
+  currentPageIndex = nextPageIndex;
+  nextPageIndex = null;
+}
+
+/******Select random animation Function and call it*******/
+
+function selectAnimation() {
+  let index = Math.round(Math.random(0.19999));
+  switch (index) {
+    case 0:
+      slidePageRightToLeft();
+      break;
+
+    case 1:
+      zoomAndFade();
+      break;
+  }
+}
 
 /******************Run program******************** */
 // render page function
@@ -46,7 +67,7 @@ function renderPage() {
   getNextPage();
   page[nextPageIndex].scrollTop = 0; //scroll next element to top
   if (nextPageIndex !== null && currentPageIndex !== nextPageIndex) {
-    slidePageRightToLeft();
+    selectAnimation();
   }
 }
 
