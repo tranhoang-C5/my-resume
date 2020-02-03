@@ -131,3 +131,11 @@ renderFilterdList(listProjects);
 filterBtn.forEach(el => {
   el.addEventListener("click", filterProject);
 });
+
+//blog alert
+const blogItem = document.querySelectorAll(".blog-content-item");
+blogItem.forEach(item => {
+  item.addEventListener("click", function() {
+    alert("Cảm ơn bạn quan tâm tính năng này đang được mình phát triển");
+  });
+});
